@@ -1,0 +1,126 @@
+body{
+    background-color: rgb(0, 0, 0,.04);
+    padding: 0;
+}
+
+.main-cont{
+    .section-stages{
+        width: 100%;
+        padding: 80px;
+
+        .titles-form{
+            .title-2{
+                font-size: 30px;
+                font-weight: 800;
+                color: rgb(0, 0, 0,.85);
+                text-transform: capitalize;
+            }
+
+            .desc{
+                font-size: 14px;
+                font-weight: 600;
+                color: rgb(0,0,0,.7);
+                margin-top: 5px;
+                padding-right: 20%;
+            }
+        }
+
+        .center-logo{
+            .false-logo{
+                width: 140px;
+                height: 140px;
+                border-radius: 100%;
+                background-color: rgb(0, 0, 0,.06);
+                left: 0;
+                right: 0;
+                margin: auto;
+                display: flex;
+                align-items: center;
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+
+        .center-text{
+            text-align: center;
+
+            .title{
+                font-size: 45px;
+                font-weight: 800;
+                color: rgb(0, 0, 0,.85);
+                line-height: 100%;
+                margin-top: 20px;
+                padding: 0 14%;
+                text-transform: capitalize;
+            }
+
+            .desc{
+                font-size: 14px;
+                font-weight: 600;
+                color: rgb(0, 0, 0,.7);
+                margin-top: 20px;
+                padding: 0 10%;
+            }
+        }
+
+        .buttons-section{
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+
+            a {
+                padding: 14px 30px;
+                border: 2px solid rgb(0, 0, 0,.25);
+                font-size: 14px;
+                font-weight: 800;
+                text-decoration: none;
+                border-radius: 40px;
+                color: rgb(0, 0, 0,.7);
+                transition: 0.08s;
+                cursor: pointer;
+
+                &:hover{
+                    transition: 0.05s;
+                    transform: scale(1.05);
+                    background-color: #e3e3e3;
+                }
+
+                &.active{
+                    background-color: var(--general-color-light);
+                    color: #fff;
+                    border-color: transparent;
+
+                    &:hover{
+                        transition: 0.05s;
+                        filter: brightness(80%);
+                        transform: scale(1.05);
+                    }
+
+                    &:active{
+                        transition: 0.06s;
+                        filter: brightness(80%);
+                        transform: scale(0.9);
+                    }
+                }
+
+                &:active{
+                    transition: 0.06s;
+                    filter: brightness(80%);
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+}
+
+#section-1, #section-2, #section-3{
+    transition: 300ms;
+}
+
+#section-2, #section-3{
+    display: none;
+    opacity: 0;
+}

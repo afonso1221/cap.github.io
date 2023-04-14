@@ -1,0 +1,144 @@
+.starting-section {
+    background-image: url(../../midea/home/church.jpg);
+    background-position: center;
+    background-size: cover;
+
+    .back-cover {
+        width: 100%;
+        height: 100%;
+        padding: 80px;
+        background-image: linear-gradient(170deg, rgba(0, 0, 0, 0.366), rgba(9, 4, 160, 0.914));
+
+        @media (max-width: 991px){
+            padding: 80px 30px;
+        }
+
+        @media (max-width: 400px){
+            padding: 60px 10px;
+        }
+
+        .center-title {
+            padding: 4px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.486);
+            width: max-content;
+            border: 1px solid #ffffff9c;
+        }
+
+        .title {
+            font-size: 55px;
+            font-weight: 800;
+            color: #fff;
+            line-height: 100%;
+            margin-top: 25px;
+            text-align: center;
+
+            @media (max-width: 639px) {
+                font-size: 45px;
+            }
+
+            @media (max-width: 400px) {
+                font-size: 40px;
+            }
+        }
+
+        .desc {
+            font-size: 14px;
+            font-weight: 500;
+            color: #fff;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .socials{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            @media (max-width: 425px) {
+                gap: 4px;
+            }
+
+            a{
+                padding: 10px;
+                border-radius: 4px;
+
+                &:hover{
+                    background-color: rgb(0, 0, 0,.6);
+                }
+
+                svg{
+                    width: 24px;
+                    height: 24px;
+
+                    path{
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 40px;
+
+            @media (max-width: 425px) {
+                display: block;
+
+                & > div:nth-child(1){
+                    margin-bottom: 30px;
+                }
+    
+                & > div {
+                    text-align: center;
+                }
+            }
+
+            &>div .account-link {
+                padding: 14px 30px;
+                border-radius: 40px;
+                background-color: #fff;
+                color: #111111;
+                font-size: 14px;
+                font-weight: 900;
+                text-decoration: none;
+            }
+
+            &>div .blog-link{
+                padding: 14px 30px;
+                border-radius: 40px;
+                background-color: #000000;
+                color: #ffffff;
+                font-size: 14px;
+                font-weight: 800;
+                text-decoration: none;
+            }
+
+            & > div {
+                transition: 0.2s;
+
+                &:hover{
+                    transition: 0.04s;
+                    transform: scale(1.03);
+                    filter: brightness(70%);
+                }
+
+                &:active{
+                    transition: 0.04s;
+                    transform: scale(0.86);
+                }
+            }
+        }
+    }
+}

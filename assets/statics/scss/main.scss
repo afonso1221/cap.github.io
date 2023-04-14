@@ -1,0 +1,180 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --general-color-5: rgb(236, 238, 255);
+    --general-color-10: rgb(211, 216, 255);
+    --general-color-dark: rgb(5, 20, 133);
+    --general-color-light: rgb(14, 36, 199);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 55px 0 0 0;
+
+    * {
+        font-family: Montserrat;
+    }
+}
+
+.-click-down {
+    transition: 0.2s;
+
+    &:active {
+        transition: 0.04s;
+        transform: translateY(5px) !important;
+    }
+}
+
+.-click-in {
+    transition: 0.2s;
+
+    &:active {
+        transition: 0.04s;
+        transform: scale(0.85) !important;
+    }
+}
+
+header.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+
+    .navbar {
+        padding: 2px;
+        border-bottom: 1px solid rgb(0, 0, 0, .1);
+        background-color: #fff;
+
+        .container-fluid {
+            padding: 0 40px;
+
+            @media (max-width: 991px) {
+                padding: 0 20px;
+            }
+
+            .navbar-toggler {
+                box-shadow: none;
+                border: none;
+                outline: none;
+
+                svg {
+                    width: 25px;
+                    height: 25px;
+
+                    path {
+                        fill: rgb(0, 0, 0, .8);
+                    }
+                }
+            }
+
+            .navbar-brand {
+                .logo {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 100%;
+                    background-color: rgb(0, 0, 0, .1);
+
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .navbar-nav {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                font-weight: 600;
+
+                .nav-item {
+                    text-align: center;
+
+                    &.dropdown {
+                        .dropdown-menu {
+                            border-radius: 0;
+                            border: 1px solid rgb(0, 0, 0, .1);
+
+                            .dropdown-item {
+                                padding: 4px 20px;
+                                font-size: 14px;
+                                font-weight: 600;
+                                color: rgb(0, 0, 0, .6);
+
+                                &:hover {
+                                    color: var(--general-color-light);
+                                    background-color: var(--general-color-5);
+                                }
+
+                                &:active {
+                                    background-color: var(--general-color-10);
+                                }
+                            }
+                        }
+                    }
+
+                    .nav-link {
+                        color: rgb(0, 0, 0, .6);
+                        font-weight: 600;
+
+                        &.dropdown-toggle {
+                            border: none;
+                            outline: none;
+                            box-shadow: none;
+                        }
+
+                        &:hover {
+                            color: var(--general-color-light);
+                        }
+                    }
+                }
+            }
+
+            .auth-btns {
+                @media (max-width: 991px) {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+
+                .auth-btn-on {
+                    padding: 6px 20px;
+                    text-decoration: none;
+                    font-size: 13px;
+                    font-weight: 600;
+                    border-radius: 4px;
+                    background-color: transparent;
+                    color: rgb(0, 0, 0, .7);
+                    font-weight: 700;
+                }
+
+                .auth-btn-in {
+                    padding: 6px 20px;
+                    text-decoration: none;
+                    font-size: 13px;
+                    font-weight: 600;
+                    border-radius: 4px;
+                    background-color: var(--general-color-dark);
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
